@@ -17,9 +17,9 @@ public class CFG2Config {
     public CFG2Config(String appName) throws Exception {
         this.appName = appName;
 
-        String syncHome = getSyncDir();
+        this.syncDir = getSyncDir();
 
-        String dir = syncHome+"\\Apps";
+        String dir = this.syncDir+"\\Apps";
         if (!FileUtils.folderExists(dir)) {
             FileUtils.createFolder(dir);
         }
